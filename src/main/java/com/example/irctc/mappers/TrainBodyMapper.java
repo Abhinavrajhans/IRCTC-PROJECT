@@ -6,7 +6,7 @@ import com.example.irctc.entity.TrainBody;
 
 public class TrainBodyMapper {
 
-    public static TrainBodyResponseDTO EntitytoResponseDTO(TrainBody trainbody) {
+    public static TrainBodyResponseDTO toResponseDTO(TrainBody trainbody) {
         return TrainBodyResponseDTO.builder()
                 .companyName(trainbody.getCompanyName())
                 .trainbody_id(trainbody.getId())
@@ -14,20 +14,8 @@ public class TrainBodyMapper {
                 .updatedAt(trainbody.getUpdatedAt())
                 .build();
     }
-    public static TrainBodyRequestDTO EntitytoRequestDTO(TrainBody trainbody) {
-        return TrainBodyRequestDTO.builder()
-                .companyName(trainbody.getCompanyName())
-                .build();
-    }
 
-    public static TrainBody toEntity(TrainBodyResponseDTO trainBodyResponseDTO)
-    {
-        return TrainBody.builder()
-                .companyName(trainBodyResponseDTO.getCompanyName())
-                .build();
-    }
-
-    public static TrainBody RequestDTOtoEntity(TrainBodyRequestDTO trainBodyRequestDTO) {
+    public static TrainBody toEntity(TrainBodyRequestDTO trainBodyRequestDTO) {
         return TrainBody.builder()
                 .companyName(trainBodyRequestDTO.getCompanyName())
                 .build();
