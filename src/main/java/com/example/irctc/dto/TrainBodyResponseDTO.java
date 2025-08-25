@@ -2,6 +2,8 @@ package com.example.irctc.dto;
 
 import lombok.*;
 
+import java.time.Instant;
+
 @Data
 @Getter
 @Setter
@@ -9,9 +11,8 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class TrainBodyResponseDTO {
-    private String trainbody_id;
-    private String name;
-    private String city;
-    private String createdAt;
-    private String updatedAt;
+    private Long trainbody_id;
+    private String companyName;
+    private Instant createdAt;
+    private Instant updatedAt;
 }

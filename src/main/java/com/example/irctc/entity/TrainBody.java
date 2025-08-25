@@ -13,8 +13,7 @@ import org.springframework.stereotype.Repository;
 @Entity
 public class TrainBody extends BaseEntity{
     @Column(nullable = false)
-    private String name;
+    private String companyName;
 
-    @Column(nullable = false)
-    private String city;
+
 }
