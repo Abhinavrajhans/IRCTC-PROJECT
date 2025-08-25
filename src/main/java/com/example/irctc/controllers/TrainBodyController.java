@@ -20,7 +20,7 @@ public class TrainBodyController {
     }
 
     @PostMapping
-    public ResponseEntity<TrainBodyResponseDTO> createTrainBody(@Valid @RequestBody TrainBodyRequestDTO trainBodyDTO) throws IOException {
+    public ResponseEntity<TrainBodyResponseDTO> createTrainBody(@Valid @RequestBody TrainBodyRequestDTO trainBodyDTO)  {
         TrainBodyResponseDTO trainBodyResponseDTO=this.trainbodyservice.createTrainBody(trainBodyDTO);
         return ResponseEntity.ok().body(trainBodyResponseDTO);
     }

@@ -20,7 +20,7 @@ public class TrainBodyService implements ITrainBodyService {
 
 
     @Override
-    public TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO trainBodyDTO) throws IOException {
+    public TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO trainBodyDTO)  {
         TrainBody trainbody = TrainBodyMapper.RequestDTOtoEntity(trainBodyDTO);
         TrainBody savedTrainBody = trainrepository.save(trainbody);
         return TrainBodyMapper.EntitytoResponseDTO(savedTrainBody);

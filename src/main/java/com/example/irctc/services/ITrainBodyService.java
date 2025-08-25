@@ -7,5 +7,5 @@ import java.io.IOException;
 
 public interface ITrainBodyService {
 
-    TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO  trainbody ) throws IOException;
+    TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO  trainbody ) ;
 }
