@@ -3,7 +3,6 @@ package com.example.irctc.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.*;
-import org.springframework.stereotype.Repository;
 
 @Getter
 @Setter
