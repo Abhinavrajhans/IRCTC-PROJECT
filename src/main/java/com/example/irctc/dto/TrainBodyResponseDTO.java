@@ -5,8 +5,6 @@ import lombok.*;
 import java.time.Instant;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class TrainBodyResponseDTO {
     private Long trainbody_id;

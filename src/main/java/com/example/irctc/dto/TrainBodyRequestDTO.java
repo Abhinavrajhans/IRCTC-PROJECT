@@ -4,8 +4,6 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class TrainBodyRequestDTO {
 
