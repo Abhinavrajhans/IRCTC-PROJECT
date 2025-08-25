@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 public class TrainBody extends BaseEntity{
     @Column(nullable = false)
     private String name;

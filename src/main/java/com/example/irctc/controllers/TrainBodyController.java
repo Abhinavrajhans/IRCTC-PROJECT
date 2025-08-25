@@ -4,8 +4,7 @@ import com.example.irctc.dto.TrainBodyRequestDTO;
 import com.example.irctc.dto.TrainBodyResponseDTO;
 import com.example.irctc.services.ITrainBodyService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/trainbody")
@@ -17,7 +16,8 @@ public class TrainBodyController {
         this.trainbodyservice = trainbodyservice;
     }
 
-    public ResponseEntity<TrainBodyResponseDTO> createTrainBody(TrainBodyRequestDTO trainBodyDTO) {
+    @PostMapping
+    public ResponseEntity<TrainBodyResponseDTO> createTrainBody(@RequestBody TrainBodyRequestDTO trainBodyDTO) {
         TrainBodyResponseDTO trainBodyResponseDTO=this.trainbodyservice.createTrainBody(trainBodyDTO);
         return ResponseEntity.ok().body(trainBodyResponseDTO);
     }
