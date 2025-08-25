@@ -12,8 +12,7 @@ import org.springframework.stereotype.Repository;
 @Builder
 @Entity
 public class TrainBody extends BaseEntity{
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true, length = 100)
     private String companyName;
-
 
 }

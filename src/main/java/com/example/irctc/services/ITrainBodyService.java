@@ -3,7 +3,9 @@ package com.example.irctc.services;
 import com.example.irctc.dto.TrainBodyRequestDTO;
 import com.example.irctc.dto.TrainBodyResponseDTO;
 
+import java.io.IOException;
+
 public interface ITrainBodyService {
 
-    public TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO  trainbody );
+    TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO  trainbody ) throws IOException;
 }

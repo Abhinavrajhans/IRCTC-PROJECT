@@ -4,15 +4,13 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class TrainBodyRequestDTO {
 
-    @NotBlank(message =" Station name is Required")
-    @Size(min=2 , max= 100 , message = "Station Name must be between 2 and 100 characters")
+    @NotBlank(message ="Company name is Required")
+    @Size(min=2 , max= 100 , message = "Company Name must be between 2 and 100 characters")
     private String companyName;
 
 }

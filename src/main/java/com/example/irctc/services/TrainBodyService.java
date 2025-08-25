@@ -7,6 +7,8 @@ import com.example.irctc.mappers.TrainBodyMapper;
 import com.example.irctc.repository.TrainBodyRepository;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+
 @Service
 public class TrainBodyService implements ITrainBodyService {
 
@@ -18,7 +20,7 @@ public class TrainBodyService implements ITrainBodyService {
 
 
     @Override
-    public TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO trainBodyDTO) {
+    public TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO trainBodyDTO) throws IOException {
         TrainBody trainbody = TrainBodyMapper.RequestDTOtoEntity(trainBodyDTO);
         TrainBody savedTrainBody = trainrepository.save(trainbody);
         return TrainBodyMapper.EntitytoResponseDTO(savedTrainBody);
