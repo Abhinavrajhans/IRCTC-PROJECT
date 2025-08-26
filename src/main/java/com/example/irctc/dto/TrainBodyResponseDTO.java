@@ -6,8 +6,10 @@ import java.time.Instant;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TrainBodyResponseDTO {
-    private Long trainbody_id;
+    private Long trainBodyId;
     private String companyName;
     private Instant createdAt;
     private Instant updatedAt;

@@ -9,7 +9,7 @@ public class TrainBodyMapper {
     public static TrainBodyResponseDTO toResponseDTO(TrainBody trainbody) {
         return TrainBodyResponseDTO.builder()
                 .companyName(trainbody.getCompanyName())
-                .trainbody_id(trainbody.getId())
+                .trainBodyId(trainbody.getId())
                 .createdAt(trainbody.getCreatedAt())
                 .updatedAt(trainbody.getUpdatedAt())
                 .build();

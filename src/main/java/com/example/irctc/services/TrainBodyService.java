@@ -15,7 +15,7 @@ public class TrainBodyService implements ITrainBodyService {
 
     private final TrainBodyRepository trainrepository;
 
-    TrainBodyService(TrainBodyRepository trainrepository) {
+    public TrainBodyService(TrainBodyRepository trainrepository) {
         this.trainrepository = trainrepository;
     }
 
