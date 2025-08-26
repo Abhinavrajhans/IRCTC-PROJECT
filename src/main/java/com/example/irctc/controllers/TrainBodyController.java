@@ -25,4 +25,11 @@ public class TrainBodyController {
         return ResponseEntity.ok().body(trainBodyResponseDTO);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<TrainBodyResponseDTO> getByTrainBodyId(@PathVariable long id)
+    {
+        TrainBodyResponseDTO trainBodyResponseDTO=this.trainbodyservice.getTrainBodyById(id);
+        return ResponseEntity.ok().body(trainBodyResponseDTO);
+    }
+
 }

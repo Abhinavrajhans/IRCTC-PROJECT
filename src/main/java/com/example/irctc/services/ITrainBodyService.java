@@ -8,4 +8,5 @@ import java.io.IOException;
 public interface ITrainBodyService {
 
     TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO  trainbody ) ;
+    TrainBodyResponseDTO getTrainBodyById(long id);
 }
