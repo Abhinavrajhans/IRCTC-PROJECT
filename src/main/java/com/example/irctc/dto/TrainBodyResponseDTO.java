@@ -9,7 +9,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TrainBodyResponseDTO {
-    private Long trainBodyId;
+    private Long id;
     private String companyName;
     private Instant createdAt;
     private Instant updatedAt;

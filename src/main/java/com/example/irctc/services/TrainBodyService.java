@@ -6,19 +6,17 @@ import com.example.irctc.entity.TrainBody;
 import com.example.irctc.exception.TrainBodyNotFoundException;
 import com.example.irctc.mappers.TrainBodyMapper;
 import com.example.irctc.repository.TrainBodyRepository;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-
-import java.util.List;
 
 @Service
 public class TrainBodyService implements ITrainBodyService {
 
     private final TrainBodyRepository trainBodyRepository;
 
-    public TrainBodyService(TrainBodyRepository trainrepository) {
-        this.trainBodyRepository = trainrepository;
+    public TrainBodyService(TrainBodyRepository trainBodyRepository) {
+        this.trainBodyRepository = trainBodyRepository;
     }
 
 
@@ -37,10 +35,8 @@ public class TrainBodyService implements ITrainBodyService {
     }
 
     @Override
-    public List<TrainBodyResponseDTO> getAllTrainBodies(Pageable pageable) {
+    public Page<TrainBodyResponseDTO> getAllTrainBodies(Pageable pageable) {
         return trainBodyRepository.findAll(pageable)
-                .stream()
-                .map(TrainBodyMapper::toResponseDTO)
-                .toList();
+                .map(TrainBodyMapper::toResponseDTO);
     }
 }
