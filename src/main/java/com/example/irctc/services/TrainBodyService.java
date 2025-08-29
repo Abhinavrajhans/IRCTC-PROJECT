@@ -6,7 +6,6 @@ import com.example.irctc.entity.TrainBody;
 import com.example.irctc.exception.TrainBodyNotFoundException;
 import com.example.irctc.mappers.TrainBodyMapper;
 import com.example.irctc.repository.TrainBodyRepository;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -23,11 +22,6 @@ public class TrainBodyService implements ITrainBodyService {
 
     @Override
     public TrainBodyResponseDTO createTrainBody(TrainBodyRequestDTO trainBodyDTO)  {
-        String companyName=trainBodyDTO.getCompanyName().trim();
-        if(this.trainBodyRepository.existsByCompanyNameIgnoreCase(companyName))
-        {
-            throw new DataIntegrityViolationException("Company name already exists");
-        }
         TrainBody trainbody = TrainBodyMapper.toEntity(trainBodyDTO);
         TrainBody savedTrainBody = trainBodyRepository.save(trainbody);
         return TrainBodyMapper.toResponseDTO(savedTrainBody);

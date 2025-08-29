@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TrainBodyRepository extends JpaRepository<TrainBody,Long> {
-    boolean existsByCompanyNameIgnoreCase(String companyName);
 }
